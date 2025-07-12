@@ -3,12 +3,12 @@
 
 TCL (Tool Command Language) is a powerful scripting language widely used in VLSI design automation and EDA tools. This 10-day workshop, conducted by VLSI System Design (VSD), provides hands-on training in TCL scripting for automating design workflows. It is tailored for students and professionals aiming to strengthen their VLSI scripting skills. Each session builds practical knowledge through guided labs and real-world examples.
 
-
+---
 ## 🔧 Virtual Environment Setup Using VDI
 
 On the first day of the TCL workshop, I completed the setup of the virtual lab environment by following the instructions provided in the *StepsToOpenTCL_Labs.pdf*. This included downloading the required VDI file, configuring a virtual machine using Oracle VirtualBox, and successfully launching the Ubuntu-based lab system. With the virtual environment properly configured, I am now prepared to begin the TCL lab sessions in a controlled and consistent workspace.
 
-
+---
 ##  🔍 Learning Objectives
 
 By completing this task, we will:
@@ -17,7 +17,8 @@ By completing this task, we will:
 - Learn how to parse external inputs like Excel and integrate file I/O in TCL
 - Understand **pre-layout timing analysis** in digital designs
 - Build a reusable and scalable **automation framework**
-  
+
+---
 ## About the Project
 ### 🎯 Project Objective
 
@@ -27,7 +28,7 @@ To develop a **TCL-based User Interface (UI)** system that:
 
 This flow is automated through a TCL script (`VSDSynth.tcl`), also referred to as the **TCL box**.
 
----
+
 
 ### 📦 Input – Excel Sheet
 
@@ -60,5 +61,14 @@ We focus on building this box step-by-step, covering all script internals and da
 
 The final output of this system is a **pre-layout timing report** — a datasheet that provides early insights into the performance and characteristics of the RTL design, before physical synthesis.
 
+---
 
+## ⚙️ Tasks and tools needed
+- Create command (for eg. vsdsynth) and pass .csv from UNIX shell to TCL script
+
+- Convert all inputs to format[1] & SDC format, and pass to synthesis tool ‘Yosys’
+
+- Convert format[1] & SDC to format[2] and pass to timing tool ‘Opentimer’
+
+- Generate output report
 
