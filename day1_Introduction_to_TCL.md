@@ -42,7 +42,7 @@ The Excel sheet acts as a **design descriptor**, containing key information such
 
 This behavioral input is essentially a blueprint for a digital processor or RTL design.
 
----
+
 
 ### ⚙️ The TCL Box (`VSDSynth.tcl`)
 
@@ -54,11 +54,11 @@ It is responsible for:
 
 We focus on building this box step-by-step, covering all script internals and data handling workflows.
 
----
+
 
 ### 📄 Output – Pre-Layout Timing Datasheet
 
 The final output of this system is a **pre-layout timing report** — a datasheet that provides early insights into the performance and characteristics of the RTL design, before physical synthesis.
 
----
+
 
