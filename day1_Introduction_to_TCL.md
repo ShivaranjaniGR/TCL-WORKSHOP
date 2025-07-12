@@ -26,7 +26,7 @@ To develop a **TCL-based User Interface (UI)** system that:
 - 📥 Takes an **Excel sheet as input**
 - 📤 Produces a **design datasheet (pre-layout timing report)** as output
 
-This flow is automated through a TCL script (`VSDSynth.tcl`), also referred to as the **TCL box**.
+This flow is automated through a TCL script (`SynthTime.tcl`), also referred to as the **TCL box**.
 
 
 
@@ -45,7 +45,7 @@ This behavioral input is essentially a blueprint for a digital processor or RTL 
 
 
 
-### ⚙️ The TCL Box (`VSDSynth.tcl`)
+### ⚙️ The TCL Box (`SynthTime.tcl`)
 
 At the heart of the project is a script engine called the **TCL box**, implemented in the file `VSDSynth.tcl`.  
 It is responsible for:
@@ -64,7 +64,7 @@ The final output of this system is a **pre-layout timing report** — a datashee
 ---
 
 ## ⚙️ Tasks and tools needed
-- Create command (for eg. vsdsynth) and pass .csv from UNIX shell to TCL script
+- Create command (for eg. SynthTime) and pass .csv from UNIX shell to TCL script
 
 - Convert all inputs to format[1] & SDC format, and pass to synthesis tool ‘Yosys’
 
