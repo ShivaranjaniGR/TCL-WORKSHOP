@@ -1,3 +1,5 @@
+link to video - https://drive.google.com/file/d/1HFaqTEEZhOVOMSFCUGOQOgQzCPScjSfJ/view
+
 # DAY 1
 ## 🧠 Introduction to TCL
 
@@ -71,4 +73,8 @@ The final output of this system is a **pre-layout timing report** — a datashee
 - Convert format[1] & SDC to format[2] and pass to timing tool ‘Opentimer’
 
 - Generate output report
+
+---
+
+
 
