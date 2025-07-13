@@ -40,3 +40,18 @@ it is  like a to-do list for your computer to automate tasks like:
 The shell script is the launcher.
 The TCL script is the logic engine.
 
+## what is a shebang line?
+A shebang line is the very first line in a script file that tells the operating system which interpreter to use to run the script.
+- #! is called a shebang
+
+- It must be the first two characters in the file
+
+- It’s followed by the full path to the interpreter (like Bash, tcsh, Python, etc.)
+
+Without it, the system doesn’t know which language (bash, tcsh, python, etc.) the script is written in — so it may:
+
+❌ Throw an error
+
+❌ Use the wrong shell (e.g., sh instead of tcsh)
+
+❌ Misinterpret the syntax (leading to bugs like “command not found”)
