@@ -1,4 +1,4 @@
-link to video - https://drive.google.com/file/d/1HFaqTEEZhOVOMSFCUGOQOgQzCPScjSfJ/view
+
 
 # DAY 1
 ## 🧠 Introduction to TCL
