@@ -55,3 +55,7 @@ Without it, the system doesn’t know which language (bash, tcsh, python, etc.) 
 ❌ Use the wrong shell (e.g., sh instead of tcsh)
 
 ❌ Misinterpret the syntax (leading to bugs like “command not found”)
+
+## Argument indexing in shell vs TCL
+shell - $argv[1], $argv[2]
+TCL - lindex $argv 0 , lindex $argv 1
