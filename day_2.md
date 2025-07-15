@@ -6,3 +6,5 @@
    - create the variable DesignName
    - assign it the relevant value from the array
      
+[....] - tcl command
+vim - opens file in read mode
