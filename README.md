@@ -206,15 +206,15 @@ if { [file exists $ConstraintsFile]} {
 ```
 If the all the files and directory mentioned exists, then we can go for the further process.
 
-![Image](https://github.com/user-attachments/assets/521fb6b5-ce7c-4778-8289-ae21c8cb3c27)
+<img width="1031" height="187" alt="image" src="https://github.com/user-attachments/assets/e3226425-e57d-4ea9-83ea-9c3e5ccb5d89" />
 
-If the mentioned directory does not exists, then the script will create a new directroy as shown in the below figure.
 
-![Image](https://github.com/user-attachments/assets/7e0b6ed4-c020-4652-818d-42b7ad702985)
+If the mentioned directory does not exists, then the script will create a new directroy for output.
 
-If the file mentioned does not exists, then the script will exit as shown in the below figure.
 
-![Image](https://github.com/user-attachments/assets/d87b0f9f-cea3-42c9-a38a-509c4a36ed40)
+
+If the file mentioned does not exists, then the script will exit 
+
 
 #### Convert constraints file into a SDC format 
 
@@ -249,7 +249,8 @@ puts "input_ports_start =$input_ports_start"
 set output_ports_start [lindex [lindex [ constraints search all OUTPUTS] 0] 1]
 puts "output_ports_start = $output_ports_start "
 ```
-![Image](https://github.com/user-attachments/assets/f059474c-d514-435f-970f-24e8a8b849be)
+<img width="1016" height="261" alt="image" src="https://github.com/user-attachments/assets/57429605-0d7e-4dbb-8388-76f57cb1566a" />
+
 
 In above figure, we can see the number of rows and columns in constraints.csv file is 57 and 11 respectively. We can also see the clock starting row as 0, input starting row as 4, and output starting row as 27. By obtaining these values we can easily process the constraints.csv file into SDC format.
 
