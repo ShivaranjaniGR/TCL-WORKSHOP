@@ -1,6 +1,6 @@
 
 
-# DAY 1
+
 ## 🧠 Introduction to TCL
 
 TCL (Tool Command Language) is a powerful scripting language widely used in VLSI design automation and EDA tools. This 10-day workshop, conducted by VLSI System Design (VSD), provides hands-on training in TCL scripting for automating design workflows. It is tailored for students and professionals aiming to strengthen their VLSI scripting skills. Each session builds practical knowledge through guided labs and real-world examples.
