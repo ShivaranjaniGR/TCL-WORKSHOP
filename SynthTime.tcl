@@ -75,7 +75,7 @@ if { [file exists $ConstraintsFile]} {
 puts "\n Info: Dumping SDC constraints for $DesignName"
 ::struct::matrix constraints
 set chan [open $ConstraintsFile]
-csv::read2matrix $chan constraints , auto
+csv::read2matrix $chan constraints , auto 
 close $chan
 set constr_rows [constraints rows]
 puts " number of rows in constraints file = $constr_rows "
