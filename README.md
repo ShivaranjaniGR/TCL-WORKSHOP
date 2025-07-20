@@ -1043,7 +1043,8 @@ puts "\nInfo: Refer to $OutputDirectory/$DesignName.results for warings and erro
 ```
 The above script is used to executed the Opnetimer tool by passing openMSP430.conf file as an input the results are stored in openMSP430.results. It also stores the time elapsed during STA in microseconds and seconds as shown below.
 
-![Image](https://github.com/user-attachments/assets/e00ffcf6-c495-42d4-bd4c-5c17cd05621f)
+<img width="698" height="125" alt="image" src="https://github.com/user-attachments/assets/79d4b047-b95f-454a-8b88-070ec550662f" />
+
 
 
 
@@ -1145,7 +1146,8 @@ puts "Number_output_violations is \{$Number_output_violations\}"
 
 The above script can be used to find different parameters such as worst hold violation, no of hold vioalations etc... which are reported in final output and also displays on terminal.
 
-![Image](https://github.com/user-attachments/assets/e4c08501-1dae-4fc8-a7ae-7d7a105a8135)
+<img width="502" height="205" alt="image" src="https://github.com/user-attachments/assets/d30e6cde-70e1-4e95-9323-d6c470dca3ce" />
+
 
 ```
 puts "\n"
