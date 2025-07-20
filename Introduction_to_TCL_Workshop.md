@@ -69,13 +69,6 @@ The final output of this system is a **pre-layout timing report** — a datashee
 - Create command (for eg. SynthTime) and pass .csv from UNIX shell to TCL script
 
 - Convert all inputs to format[1] & SDC format, and pass to synthesis tool ‘Yosys’
-  - Create variables  
-  - Check if directories and files mentioned in .csv, exists or not  
-  - Read “Constraints File” for above .csv and convert to SDC format  
-  - Read all files in “Netlist Directory”  
-  - Create main synthesis script in format[1]  
-  - Pass this script to Yosys
-
 
 - Convert format[1] & SDC to format[2] and pass to timing tool ‘Opentimer’
 
