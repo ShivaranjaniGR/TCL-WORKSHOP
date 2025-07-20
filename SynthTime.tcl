@@ -468,19 +468,19 @@ puts "\n$OutputDirectory/$DesignName.final.synth.v"
 puts "\nInfo: Timing Analysis Started ... "
 puts "\nInfo: Initializing number of threads, libraries, sdc, verilog netlist path..."
 
-source /home/vsduser/vsdsynth/procs/reopenStdout.proc
-source /home/vsduser/vsdsynth/procs/set_num_threads.proc
+source /Home/SynthTime/procs/reopenStdout.proc
+source /Home/SynthTime/procs/set_num_threads.proc
 reopenStdout $OutputDirectory/$DesignName.conf
 set_multi_cpu_usage -localCpu 4
 
-source /home/vsduser/vsdsynth/procs/read_lib.proc
-read_lib -early /home/vsduser/vsdsynth/osu018_stdcells.lib
-read_lib -late /home/vsduser/vsdsynth/osu018_stdcells.lib
+source /Home/SynthTime/procs/read_lib.proc
+read_lib -early /Home/SynthTime/osu018_stdcells.lib
+read_lib -late /Home/SynthTime/osu018_stdcells.lib
 
-source /home/vsduser/vsdsynth/procs/read_verilog.proc
+source /Home/SynthTime/procs/read_verilog.proc
 read_verilog $OutputDirectory/$DesignName.final.synth.v
 
-source /home/vsduser/vsdsynth/procs/read_sdc.proc
+source /Home/SynthTime/procs/read_sdc.proc
 read_sdc $OutputDirectory/$DesignName.sdc
 reopenStdout /dev/tty
 
@@ -520,7 +520,7 @@ close $conf_file
 #-------------------------------------------- Finding STA runtime ---------------------------------------#
 #--------------------------------------------------------------------------------------------------------#
 
-set time_elapsed_in_us [time {exec /home/vsduser/OpenTimer-1.0.5/bin/OpenTimer < $OutputDirectory/$DesignName.conf >& $OutputDirectory/$DesignName.results} ]
+set time_elapsed_in_us [time {exec /Home/OpenTimer-1.0.5/bin/OpenTimer < $OutputDirectory/$DesignName.conf >& $OutputDirectory/$DesignName.results} ]
 set time_elapsed_in_sec "[expr {[lindex $time_elapsed_in_us 0]/100000}]sec"
 puts "\nInfo: STA finished in $time_elapsed_in_sec seconds"
 puts "\nInfo: Refer to $OutputDirectory/$DesignName.results for warings and errors"
