@@ -40,7 +40,7 @@ The final sub-task is to generate an output report with the timing results as sh
 
 ### Sub-task 1 Create Command (panda) and pass csv file from UNIC shell to Tcl script
 
-First we need to create a UNIX script "vsdsynth" .The command was created with the following instructions:
+First we need to create a UNIX script "SynthTime" .The command was created with the following instructions:
 
 1) letting the system know that its a UNIX script
 
@@ -50,23 +50,8 @@ First we need to create a UNIX script "vsdsynth" .The command was created with t
 
 2) Creating the logo
 
-```
-echo " #    #    #    ######  ####### #     # ### #    #           "
-echo " #   #    # #   #     #    #    #     #  #  #   #             "
-echo " #  #    #   #  #     #    #    #     #  #  #  #              " 
-echo " ###    #     # ######     #    #######  #  ###               " 
-echo " #  #   ####### #   #      #    #     #  #  #  #               "
-echo " #   #  #     # #    #     #    #     #  #  #   #              "
-echo " #    # #     # #     #    #    #     # ### #    #             "
-echo 
-echo ""
-echo ""
-echo "           Developed by: Karthik"
-echo "           Acknowledgement: Kunal Ghosh, vlsisystemdesign.com"
-echo ""
-echo ""
-echo ""
-```
+<img width="753" height="372" alt="image" src="https://github.com/user-attachments/assets/c377a23c-79ab-4b2e-b208-d6d29134cd55" />
+
 
 3) Creates a variable named "my_work_dir" and assign to it the absolute path of the current working directory. The pwd command (which stands for "print working directory") returns the full path of the directory where the Tcl script is currently executin
 ```
@@ -102,15 +87,17 @@ endif
 ```
 - In first scenario, if the user is not passing  a .csv file or passing more than one .csv file then it prints a statement "Info : Please Provide the csv file" on the screen as shown below.
 
-![Image](https://github.com/user-attachments/assets/765d0790-2eec-429c-85fc-280697775b71)
+<img width="751" height="445" alt="image" src="https://github.com/user-attachments/assets/06fb926a-aafc-4cca-a5be-f0b49bfaf9f2" />
+
 
 - If the provided .csv file doesnt exist then it pritns a statement "ERROR: Cannot find the CSV file.Exiting" as shown below.
+<img width="802" height="453" alt="image" src="https://github.com/user-attachments/assets/1280eddd-109c-4a33-8d74-4616a0319cb2" />
 
-![Image](https://github.com/user-attachments/assets/19b0cc59-b1bc-4afe-8af1-0639f5c220f8)
 
 - If the user enter __-help__ 
 
-![Image](https://github.com/user-attachments/assets/618be1cc-1346-4b9b-9337-bb645c3d3e02)
+<img width="1238" height="662" alt="image" src="https://github.com/user-attachments/assets/4ff27968-4cfd-4a0c-a28f-a262747dafb3" />
+
 
 		tclsh SynthTime.tcl  $argv[1]
 
@@ -118,7 +105,7 @@ The above command executes a Tcl script named "vsdsynth.tcl" using the Tcl shell
 
 
 
-Note : Make sure the file is executable by using the command ``` chmod -R 777 panda ``` 
+Note : Make sure the file is executable by using the command ``` chmod -R 777 SynthTime ``` 
 
 ## Module 2: Variable Creation and Processing Constraints from CSV
 
@@ -174,7 +161,8 @@ puts "EarlyLibraryPath = $EarlyLibraryPath"
 puts "LateLibraryPath = $LateLibraryPath"
 puts "ConstraintsFile = $ConstraintsFile"
 ```
-![Image](https://github.com/user-attachments/assets/f2770413-e741-482e-b8f8-ecedf925f614)
+<img width="1202" height="767" alt="image" src="https://github.com/user-attachments/assets/6fbb543b-75e8-44ce-ba1d-d2c56511b54a" />
+
 
 In the above figure we can see that varaibles and their normalzied values.
 
