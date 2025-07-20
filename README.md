@@ -279,7 +279,6 @@ puts "clock_late_rise_slew_start = $clock_late_rise_slew_start"
 puts "clock_late_fall_slew_start = $clock_late_fall_slew_start"
 ```
 
-![Image](https://github.com/user-attachments/assets/5c416e4b-c4b8-4a30-9db1-54fe646412cf)
 
 In the above figure, we can see different parameter column numbers have been assign to respective variables.
 
@@ -310,9 +309,7 @@ while {$i< $end_of_ports} {
 ```
 The above mentioned script creates a .sdc file in OutputDirectory and writes the parameters into .sdc file in a particular manner as mentioned above.
 
-![Image](https://github.com/user-attachments/assets/66b2c186-f369-4e05-ba7f-598392f038a8)
 
-In the above figure, we can see that the clock parameters are written into a .sdc file and we can also verify thatthe values written are matached same as cosntraints.csv file.
 
 Similarly, we have to find the column number for input parameter. The script mentioned below can find column numbers and assigns it to a respective variable. It also displays the column numbers of input parameters on display.
 
@@ -380,7 +377,7 @@ close $tmp_file
 
 Some of the input port have multiple spaces in between them. The above mentioned script removes the spaces inbetween them and writes them in a temporary file. We can see the above process in the below figure as the scrpit reads one of input porta as "input          cpu_en" and later it is written in /tmp/1 file as "input cpu_en"
 
-![Image](https://github.com/user-attachments/assets/2b75a558-9ffd-4b23-9c5d-aa0c6933062f)
+
 
 Then we have develop a alogrithm that checks if the input ports are bussed or not. The first step in the alogrithm is to read the /tmp/1 file. Then we have to split the file by using delimiter as **\n** . If the input ports are present multiple times in temporary file then we have sort unique item. Then we have to join them. We have to write that varaible into another temporary file. Then by using __llength__ coomand, count the number of elemnets in each port. If the count is greater than 2, it means input port is bussed. So concat a "*" at the end of port name.
 
@@ -409,26 +406,6 @@ if {$count > 2} {
 	#puts "\n Not Bussed"
 }
 ```
-![Image](https://github.com/user-attachments/assets/bf68f0ff-c1ee-467b-acc1-cfc2156fa229)
-
-In the above figure, we can see we are reading "\n" and input port two times.
-
-![Image](https://github.com/user-attachments/assets/cc029769-84ee-4180-929f-2648abc6c88b)
-
-In the above figure, we split the lines and formatted into a single line.
-
-![Image](https://github.com/user-attachments/assets/2624b0b5-5dbd-4fa1-8902-7d93908bc514)
-
-In the above figure, we sorted the unique item.
-
-![Image](https://github.com/user-attachments/assets/c6b7776f-2a78-479f-9e14-6153e29d3b3d)
-
-In the above figure, we joined all elements.
-
-
-![Image](https://github.com/user-attachments/assets/6f4faff6-53a7-4117-86b8-63f8d79dd525)
-
-In the above figure, we can see if the count is greater than 2 then **"*"** was concatted at the end of port name.
 
 We have to write the input parameters into .sdc file. The script for the mentioned purpose is given below.
 ```
@@ -445,7 +422,9 @@ puts -nonewline $sdc_file "\nset_input_delay -clock  \[get_clocks [constraints g
 
 The below figure shows that the input parameters are written in .sdc file and if the port is buzzed "*" concatted at the end of port name.
 
-![Image](https://github.com/user-attachments/assets/d874f6a8-21af-49c1-9ddf-0dfc14c9311c)
+<img width="1541" height="622" alt="image" src="https://github.com/user-attachments/assets/8b589290-912c-43cf-88cb-fb204b754cd6" />
+
+
 
 
 ## Module 4: Complete Scripting and Yosys Synthesis Introduction
@@ -469,8 +448,8 @@ puts "output_late_fall_delay_start =$output_late_fall_delay_start"
 puts "output_load_start =$output_load_start"
 ```
 We can find the output parameters column numbers in the below figure.
+<img width="852" height="633" alt="image" src="https://github.com/user-attachments/assets/21c38406-39ac-4921-86e6-e12e9dc27840" />
 
-![Image](https://github.com/user-attachments/assets/8783ca50-2d84-4c44-956c-25d17c237420)
 
 We have to develop an alogrithm to check if the output ports are bussed or not. If bussd, concat "*" at the end of port name. Then write the output parameters into .sdc format in a particular sdc foramt. The script mentioned below does the above purpose.
 
@@ -548,13 +527,9 @@ close $tmp2_file
 close $sdc_file
 ```
 
-We can see the output parameters are written in sdc format in .sdc file as shown below.
+We can see the output parameters are written in sdc format in .sdc file 
 
-![Image](https://github.com/user-attachments/assets/6afe4279-ac49-4551-9837-c92cc3aa90aa)
-
-After the successful completion of writng all constraints parameters into .sdc file, we get a message saying "SDC created.Please use the constraints path /home/vsduser/vsdsynth/outdir_openMSP430/$openMSP430.sdc" as shown below.
-
-![Image](https://github.com/user-attachments/assets/c659fa92-2d99-4626-84f4-b3cf474078da)
+After the successful completion of writng all constraints parameters into .sdc file, we get a message saying "SDC created.Please use the constraints path /home/vsduser/SynthTime/outdir_openMSP430/$openMSP430.sdc" 
 
 
 #### Creating Scripts for Hierarchy check
@@ -581,9 +556,6 @@ puts -nonewline $fileId "\nhierarchy -check"
 close $fileId
 
 ```
-The script mentioned above creates a .hier.ys and writes the script for the hierarchy check as shown in the below figure.
-
-![Image](https://github.com/user-attachments/assets/60cc1f8f-d4d8-4862-b93b-e10ff6d2a3f9)
 
 Whenever we uses **"exec"** command in the tcl script, it runs the command in terminal.
 
@@ -617,13 +589,14 @@ puts "\n Info: Please find the hierearchy check details in [file normalize $Outp
 
 ```
 
-- If an error doesn't occcurs, then
+- If an error doesn't occcur, then
+<img width="927" height="547" alt="image" src="https://github.com/user-attachments/assets/94365d7a-c285-477d-b9da-f78255a41060" />
 
-![Image](https://github.com/user-attachments/assets/6954bc54-5e06-413b-8730-c24e4d51cbaa)
 
 - If an error occurs during hierarchy check then
 
-![Image](https://github.com/user-attachments/assets/9bfc50d5-12a1-46e8-81ec-978bf86573ac)
+<img width="182" height="37" alt="image" src="https://github.com/user-attachments/assets/8b726e72-601e-4b24-b25c-23f0e3bfc097" />
+
 
 
 
@@ -673,7 +646,7 @@ puts "\nInfo: Please refert olog $OutputDirectory/$DesignName.synthesis.log"
 - The above script creates a __"openMSP430.ys"__ which can be passed to Yosys for synthesis purpose.
 - It writes all the netlist and all scripts necessary for synthesis into __"openMSP430.ys"__
 - By using __"exec"__ commnad we can run yosys via tcl command and all the logs are stored in openMSP430.synthesis.log
-- If there is an error, it displays a message "Error: Syntesis failed due to errors. Please refer to log /home/vsduser/vsdsynth/outdir_openMSP430/$openMSP430.synthesis.log for errors"
+- If there is an error, it displays a message "Error: Syntesis failed due to errors"
 
 -If there is no error while running synthesis
 
