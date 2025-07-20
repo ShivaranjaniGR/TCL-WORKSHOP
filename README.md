@@ -590,7 +590,8 @@ puts "\n Info: Please find the hierearchy check details in [file normalize $Outp
 ```
 
 - If an error doesn't occcur, then
-<img width="927" height="547" alt="image" src="https://github.com/user-attachments/assets/94365d7a-c285-477d-b9da-f78255a41060" />
+<img width="255" height="57" alt="image" src="https://github.com/user-attachments/assets/d7ded2eb-09ff-461a-9c0d-421b103e7fca" />
+
 
 
 - If an error occurs during hierarchy check then
@@ -648,13 +649,6 @@ puts "\nInfo: Please refert olog $OutputDirectory/$DesignName.synthesis.log"
 - By using __"exec"__ commnad we can run yosys via tcl command and all the logs are stored in openMSP430.synthesis.log
 - If there is an error, it displays a message "Error: Syntesis failed due to errors"
 
--If there is no error while running synthesis
-
-![Image](https://github.com/user-attachments/assets/d03225d3-3e6f-4720-9e92-09469a55ea26)
-
--If there is an error while runnimg synthesis
-
-![Image](https://github.com/user-attachments/assets/f1ac5ea2-e111-478f-ba7a-b351bc18ee4e)
 
 ```
 set fileId [open /tmp/1 "w"]
@@ -680,9 +674,8 @@ puts "\n$OutputDirectory/$DesignName.final.synth.v"
 
 The above scirpt can be used to remove **\** from the gate level netlist. Because opentimer tool cannot understand the netlist with **\**  in it.As we can see we have 6119 **\**  in  the synt.v file as shown in the below figure. After running the above the count came down to 0.
 
-![Image](https://github.com/user-attachments/assets/f88b9d33-54e3-4d62-a690-3e86779b1b2d)
+<img width="508" height="742" alt="image" src="https://github.com/user-attachments/assets/58015471-d513-4fbd-88ce-99443f1e8895" />
 
-![Image](https://github.com/user-attachments/assets/25dc5030-2675-4f02-9376-14b786b7bf51)
 
 #### Procs
 
@@ -742,7 +735,6 @@ It accepts command-line style arguments through a parameter array that manages o
 
 When __set_multi_cpu_usage -localCpu 8 -help__ commnad is executed, it will go through 2 iterations like in the 1st part shown below. When __set_multi_cpu_usage -localCpu 8__ command is executed, it will go through 1 iterations like shown in the below part.
 
-![Image](https://github.com/user-attachments/assets/00594860-53f3-455a-9faf-dd07f7617b84)
 
 
 3) read_verilog.proc
@@ -813,11 +805,7 @@ puts -nonewline $tmp_file [string map {"\[" "" "\]" " "} [read $sdc]]
 close $tmp_file
 }
 ```
-The above script is used to remvoe square bractets "[]" and replace it with "" as shown in below figure.
-
-![Image](https://github.com/user-attachments/assets/280c7541-1efa-43c2-ade4-d8deaf87c3e0)
-
-![Image](https://github.com/user-attachments/assets/b93e7cf6-22a7-48bf-9336-43df32023572)
+The above script is used to remvoe square bractets "[]" and replace it with "".
 
 ```
 set tmp_file [open /tmp/1 r]
@@ -838,9 +826,11 @@ close $tmp_file
 ```
 The above script is used to convert create_clock constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern **create_clock** and gets the clock_port_name, clock_period and calucaltes dutry cycle. And then writes all the above values in /tmp/3 file as shown in below figure.
 
-![Image](https://github.com/user-attachments/assets/b1b2a8d8-5e5e-42da-86c1-e7896cdc37b2)
+<img width="717" <img width="1316" height="903" alt="image" src="https://github.com/user-attachments/assets/927ae7f3-3924-4652-ac5a-6260445751d9" />
+height="192" alt="image" src="https://github.com/user-attachments/assets/a2ab3d64-e6ec-42b5-bcc6-b1a051d82792" />
 
-![Image](https://github.com/user-attachments/assets/4f6dff5c-a1a8-437c-8ae9-1df6bb72b76a)
+
+
 
 
 ```
@@ -864,12 +854,7 @@ foreach elem $find_keyword {
 close $tmp2_file
 ```
 
-The above script is used to convert set_clock_latency constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern **set_clock_latency** and gets all the parameters. Then writes all the above values in /tmp/2 file which is furher written in .timings file as shown in below figure.
-
-![Image](https://github.com/user-attachments/assets/b1b2a8d8-5e5e-42da-86c1-e7896cdc37b2)
-
-![Image](https://github.com/user-attachments/assets/f52c7c59-272c-4f97-bbc8-18d4f9d94fc4)
-
+The above script is used to convert set_clock_latency constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern **set_clock_latency** and gets all the parameters. Then writes all the above values in /tmp/2 file which is furher written in .timings file.
 ```
 set find_keyword [lsearch -all -inline $lines "set_clock_transition*"]
 set tmp2_file [open /tmp/2 w]
@@ -896,9 +881,6 @@ close $tmp2_file
 ```
 The above script is used to convert set_clock_transition constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern **set_clock_transition**  and  gets all the parameters. Then writes all the above values in /tmp/2 file which is furher written in .timings file as shown in below figure.
 
-![Image](https://github.com/user-attachments/assets/b1b2a8d8-5e5e-42da-86c1-e7896cdc37b2)
-
-![Image](https://github.com/user-attachments/assets/a554aa97-1b28-41c0-81f9-5da5cd0414d2)
 
 ```
 set find_keyword [lsearch -all -inline $lines "set_input_delay*"]
@@ -923,11 +905,7 @@ puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 ```
 
-The above script is used to convert set_input_delay constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern __set_input_delay__ and gets all the parameters. Then writes all the above values in /tmp/2 file which is furher written in .timings file as shown in below figure.
-
-![Image](https://github.com/user-attachments/assets/969a2859-13a0-4b8b-b0c3-b0a0758aa615)
-
-![Image](https://github.com/user-attachments/assets/fc2e146a-a6cc-4297-af2e-7291e2ec1b75)
+The above script is used to convert set_input_delay constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern __set_input_delay__ and gets all the parameters. Then writes all the above values in /tmp/2 file which is furher written in .timings file 
 
 
 ```
@@ -954,11 +932,7 @@ puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 
 ```
-The above script is used to convert set_input_transition constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern __set_input_transition__  and then gets all the parameters and convert into Opentimer format. Then writes all the above values in /tmp/2 file which is furher written in .timings file as shown in below figure.
-
-![Image](https://github.com/user-attachments/assets/969a2859-13a0-4b8b-b0c3-b0a0758aa615)
-
-![Image](https://github.com/user-attachments/assets/28bf650a-4229-46e3-99ce-a138ec8e4539)
+The above script is used to convert set_input_transition constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern __set_input_transition__  and then gets all the parameters and convert into Opentimer format. Then writes all the above values in /tmp/2 file which is furher written in .timings file.
 
 ```
 set find_keyword [lsearch -all -inline $lines "set_output_delay*"]
@@ -984,11 +958,7 @@ puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 ```
 
-The above script is used to convert set_output_delay constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern __set_output_delay__  and then gets all the parameters and convert into Opentimer format. Then writes all the above values in /tmp/2 file which is furher written in .timings file as shown in below figure.
-
-![Image](https://github.com/user-attachments/assets/36a57d47-b2d6-4273-a9ab-1cff21d1583f)
-
-![Image](https://github.com/user-attachments/assets/badb89bf-5bdb-483a-9d17-80c754880a54)
+The above script is used to convert set_output_delay constraitns into format [2] which can be understandable by Opentimer tool. Basically it searches a pattern __set_output_delay__  and then gets all the parameters and convert into Opentimer format. Then writes all the above values in /tmp/2 file which is furher written in .timings file.
 
 ```
 set ot_timing_file [open $sdc_dirname/$sdc_filename.timing w]
@@ -1016,13 +986,6 @@ puts "set_timing_fpath $sdc_dirname/$sdc_filename.timing"
 ```
 The above script is used to expand bussed ports into format [2] which can be understandable by Opentimer tool as shown below.
 
-Before expanding
-
-![Image](https://github.com/user-attachments/assets/1fef3392-2aa6-4e8b-860f-95c07982a73e)
-
-after expanding
-
-![Image](https://github.com/user-attachments/assets/50d89034-e37e-4509-911e-23c734f17629)
 
 #### Creating scripts for Opentimer
 
@@ -1050,7 +1013,7 @@ close $spef_file
 ```
 The above script creates a .spef file and writes all the required commands into it as shown in below
 
-![Image](https://github.com/user-attachments/assets/80c9ba14-20a7-408b-999e-53e4eb026f96)
+
 
 ```
 set conf_file [open $OutputDirectory/$DesignName.conf a]
@@ -1065,7 +1028,7 @@ close $conf_file
 
 The above script creates a .conf file and writes all the required commands into it which is then passed as input to Opentimer tool as shown in below
 
-![Image](https://github.com/user-attachments/assets/a17bd60a-68c0-4ab0-8c5a-74aed013224e)
+
 
 #### Quality of results (QOR) generation algorithm
 
